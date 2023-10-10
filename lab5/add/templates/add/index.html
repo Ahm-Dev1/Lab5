@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Form Page</title>
+
+    </head>
+    <body>
+        <h1 id="big_title">Form Page</h1>
+        <form method="post" action="{% url 'add:add' %}">
+            {% csrf_token %}
+            <label>Username:</label>
+            <input type="text" name="username"/>
+            <br/><br/>
+            <label>Password:</label>
+            <input type="password" name="password"/>
+            <br/>
+            <br/>
+            <input type="submit" value="Submit"/>
+        </form>
+        <a href="{% url 'add:add' %}">Default page</a>
+    </body>
+</html>

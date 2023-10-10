@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Default Page</title>
+    
+    </head>
+    <body>
+      
+        <h1>Default Page</h1>
+        {% for person in people %}
+            <p>{{ person.username }}</p>
+        {% endfor %}
+        <a href="{% url 'add:show_form' %}">Add new person</a>
+   
+    </body>
+</html>
